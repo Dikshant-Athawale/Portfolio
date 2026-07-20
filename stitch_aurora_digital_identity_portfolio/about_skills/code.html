@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en" class="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#2c0051",
+                        "primary-container": "#06b6d4",
+                        "inverse-primary": "#00687a",
+                        "surface-tint": "#4cd7f6",
+                        "on-tertiary": "#002e6a",
+                        "tertiary-container": "#78a5ff",
+                        "outline-variant": "#3d494c",
+                        "inverse-on-surface": "#2a3040",
+                        "secondary-fixed": "#f0dbff",
+                        "surface-variant": "#2f3445",
+                        "tertiary-fixed-dim": "#adc6ff",
+                        "on-surface-variant": "#bcc9cd",
+                        "on-secondary": "#490080",
+                        "primary-fixed-dim": "#4cd7f6",
+                        "on-primary-fixed-variant": "#004e5c",
+                        "on-primary": "#003640",
+                        "on-surface": "#dde2f8",
+                        "surface": "#0d1322",
+                        "inverse-surface": "#dde2f8",
+                        "on-tertiary-container": "#00397f",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#00424f",
+                        "on-tertiary-fixed-variant": "#004395",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "outline": "#869397",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#242a3a",
+                        "surface-container-highest": "#2f3445",
+                        "primary-fixed": "#acedff",
+                        "on-tertiary-fixed": "#001a42",
+                        "background": "#0d1322",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#33394a",
+                        "primary": "#4cd7f6",
+                        "on-primary-fixed": "#001f26",
+                        "surface-container": "#191f2f",
+                        "surface-container-lowest": "#080e1d",
+                        "surface-dim": "#0d1322",
+                        "surface-container-low": "#151b2b",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "secondary": "#ddb7ff",
+                        "secondary-container": "#6f00be",
+                        "tertiary": "#adc6ff",
+                        "on-background": "#dde2f8",
+                        "on-secondary-container": "#d6a9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary antialiased min-h-screen flex flex-col">
+<!-- Aurora Background -->
+<div class="aurora-bg">
+<div class="aurora-blob blob-1"></div>
+<div class="aurora-blob blob-2"></div>
+<div class="aurora-blob blob-3"></div>
+</div>
+<!-- TopAppBar (Web & Mobile Hybrid) -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/30 border-b border-white/10 shadow-[0_0_20px_rgba(76,215,246,0.1)] h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-[1280px] mx-auto">
+<div class="flex items-center gap-4 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary font-headline-lg">terminal</span>
+<span class="font-headline-xl text-primary tracking-tighter glow-text-primary">DA.</span>
+</div>
+<!-- Web Navigation (Hidden on Mobile) -->
+<nav class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+<a href="#" class="text-on-surface-variant hover:text-primary transition-colors duration-300">Home</a>
+<a href="#" class="text-primary font-bold glow-text-primary">About</a>
+<a href="#" class="text-primary font-bold glow-text-primary">Skills</a>
+<a href="#" class="text-on-surface-variant hover:text-primary transition-colors duration-300">Projects</a>
+<a href="#" class="text-on-surface-variant hover:text-primary transition-colors duration-300">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:text-primary transition-colors duration-300 cursor-pointer active:scale-95 transition-transform flex items-center justify-center p-2 rounded-full hover:bg-white/5">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-40 px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto w-full flex flex-col gap-[160px]">
+<!-- ABOUT SECTION -->
+<section id="about" class="relative">
+<div class="mb-12">
+<h2 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-4">Initialize <span class="text-primary glow-text-primary">Identity</span></h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Decoding the developer behind the interface. A brief look into my background, philosophy, and the fuel that powers my code.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Glass Card -->
+<div class="glass-card rounded-xl lg:col-span-8 p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center md:items-start">
+<div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shrink-0 border-2 border-primary/30 p-2 shadow-[0_0_30px_rgba(76,215,246,0.15)]">
+<img class="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="A highly detailed, futuristic portrait illustration of a digital craftsman developer. The subject is a young professional illuminated by the glow of multiple holographic screens displaying code. The lighting is dramatic, featuring deep space obsidian backgrounds contrasting with vibrant cyan and neon purple rim lighting. The style is cyberpunk-elegant, combining sleek modern techwear with organic glassmorphic elements. The mood is focused and visionary." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-4 text-primary font-label-md">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+<span class="">System.Info()</span>
+</div>
+<h3 class="font-headline-lg text-on-surface mb-6">Dikshant Athawale <br><span class="text-on-surface-variant font-body-lg">Digital Craftsman</span></h3>
+<div class="space-y-4 font-body-md text-on-surface-variant leading-relaxed">
+<p class="">I am a software engineer focused on crafting immersive digital experiences. Bridging the gap between robust backend architectures and highly polished frontend interfaces.</p>
+<p class="">My approach combines technical precision with aesthetic intuition. I build systems that don't just function flawlessly, but feel intuitive and look exceptional.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary text-on-primary-fixed px-6 py-3 rounded-lg font-label-md font-bold hover:shadow-[0_0_15px_rgba(76,215,246,0.5)] transition-all duration-300">
+                                Download.Resume
+                            </button>
+<button class="border border-primary text-primary px-6 py-3 rounded-lg font-label-md hover:bg-primary/10 transition-all duration-300">
+                                View.GitHub
+                            </button>
+</div>
+</div>
+</div>
+<!-- Stats Grid Bento -->
+<div class="lg:col-span-4 grid grid-cols-2 gap-4">
+<div class="glass-card rounded-xl p-6 flex flex-col justify-center items-center text-center hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-2 glow-text-primary">source</span>
+<span class="font-headline-xl text-on-surface">12+</span>
+<span class="font-label-sm text-on-surface-variant mt-1">Repositories</span>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col justify-center items-center text-center hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2" style="text-shadow: 0 0 20px rgba(221,183,255,0.5);">integration_instructions</span>
+<span class="font-headline-xl text-on-surface">35+</span>
+<span class="font-label-sm text-on-surface-variant mt-1">Technologies</span>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col justify-center items-center text-center hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-2" style="text-shadow: 0 0 20px rgba(173,198,255,0.5);">history_edu</span>
+<span class="font-headline-xl text-on-surface">4+</span>
+<span class="font-label-sm text-on-surface-variant mt-1">Years Learning</span>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col justify-center items-center text-center hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-surface-tint text-4xl mb-2 glow-text-primary">local_cafe</span>
+<span class="font-headline-xl text-on-surface">∞</span>
+<span class="font-label-sm text-on-surface-variant mt-1">Coffee</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SKILLS SECTION -->
+<section class="relative" id="skills">
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-4">Tech <span class="text-secondary" style="text-shadow: 0 0 20px rgba(221,183,255,0.5);">Stack</span></h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">A quantified breakdown of my technical proficiencies across various domains.</p>
+</div>
+<!-- Category Tabs (Visual only for this layout) -->
+<div class="glass-card rounded-full p-1 flex gap-1 self-start md:self-end overflow-x-auto max-w-full">
+<button class="px-6 py-2 rounded-full bg-primary/20 text-primary font-label-md text-sm whitespace-nowrap">All</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-white/5 font-label-md text-sm transition-colors whitespace-nowrap">Frontend</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-white/5 font-label-md text-sm transition-colors whitespace-nowrap">Backend</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-white/5 font-label-md text-sm transition-colors whitespace-nowrap">DevOps</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Programming / Core -->
+<div class="glass-card rounded-xl p-8 flex flex-col gap-6 skill-glow transition-all duration-300">
+<div class="flex items-center gap-3 border-b border-white/10 pb-4">
+<span class="material-symbols-outlined text-primary text-2xl">code_blocks</span>
+<h3 class="font-headline-lg text-xl text-on-surface">Core Languages</h3>
+</div>
+<div class="space-y-5"><div class="font-label-md text-on-surface py-2 border-b border-white/5">JavaScript (ES6+)</div><div class="font-label-md text-on-surface py-2 border-b border-white/5">Python</div><div class="font-label-md text-on-surface py-2">TypeScript</div></div>
+</div>
+<!-- Frontend -->
+<div class="glass-card rounded-xl p-8 flex flex-col gap-6 skill-glow transition-all duration-300">
+<div class="flex items-center gap-3 border-b border-white/10 pb-4">
+<span class="material-symbols-outlined text-secondary text-2xl">web</span>
+<h3 class="font-headline-lg text-xl text-on-surface">Frontend</h3>
+</div>
+<div class="space-y-5"><div class="font-label-md text-on-surface py-2 border-b border-white/5">React / Next.js</div><div class="font-label-md text-on-surface py-2 border-b border-white/5">Tailwind CSS</div><div class="font-label-md text-on-surface py-2">Three.js / WebGL</div></div>
+</div>
+<!-- Backend & Database -->
+<div class="glass-card rounded-xl p-8 flex flex-col gap-6 skill-glow transition-all duration-300">
+<div class="flex items-center gap-3 border-b border-white/10 pb-4">
+<span class="material-symbols-outlined text-tertiary text-2xl">dns</span>
+<h3 class="font-headline-lg text-xl text-on-surface">Backend &amp; DB</h3>
+</div>
+<div class="space-y-5"><div class="font-label-md text-on-surface py-2 border-b border-white/5">Node.js / Express</div><div class="font-label-md text-on-surface py-2 border-b border-white/5">PostgreSQL</div><div class="font-label-md text-on-surface py-2">MongoDB</div></div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<!-- Applying ACTIVE STATE LOGIC: Setting "person" (closest to About/Profile) as active -->
+<nav class="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 z-50 bg-surface-container/70 backdrop-blur-xl border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)] rounded-full px-6 py-3">
+</nav></body></html>
