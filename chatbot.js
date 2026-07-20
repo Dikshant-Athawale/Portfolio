@@ -46,7 +46,7 @@
       question: 'What is your phone number?',
       aliases: ['phone', 'mobile number', 'contact number', 'call you', 'phone number'],
       keywords: ['phone', 'mobile', 'number', 'call'],
-      answer: 'My phone number is +91-7719876877.'
+      answer: 'I prefer to be contacted via email. You can reach me at dikshant.r.athawale@gmail.com.'
     },
     {
       id: 'intro-6', category: 'personal',
@@ -60,7 +60,7 @@
       question: 'How can I contact you?',
       aliases: ['contact info', 'contact details', 'how to reach you', 'get in touch', 'reach you', 'connect with you'],
       keywords: ['contact', 'reach', 'touch', 'connect'],
-      answer: 'You can reach me via email at dikshant.r.athawale@gmail.com, or call me at +91-7719876877. I\'m also on LinkedIn (linkedin.com/in/dikshant-athawale-374763213) and GitHub (github.com/DIkshant-Athawale). Feel free to connect!'
+      answer: 'You can reach me via email at dikshant.r.athawale@gmail.com. I\'m also on LinkedIn (linkedin.com/in/dikshant-athawale-374763213) and GitHub (github.com/DIkshant-Athawale). Feel free to connect!'
     },
     {
       id: 'intro-8', category: 'personal',

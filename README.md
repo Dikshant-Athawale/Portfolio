@@ -134,7 +134,6 @@ Then open [http://localhost:8000](http://localhost:8000) in your browser.
 - **Email**: [dikshant.r.athawale@gmail.com](mailto:dikshant.r.athawale@gmail.com)
 - **LinkedIn**: [dikshant-athawale-374763213](https://linkedin.com/in/dikshant-athawale-374763213)
 - **GitHub**: [Dikshant-Athawale](https://github.com/Dikshant-Athawale)
-- **Phone**: +91-7719876877
 
 ---
 
