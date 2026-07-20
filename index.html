@@ -623,85 +623,7 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         GITHUB SECTION
-         ============================================================ -->
-    <section id="github" class="section" aria-label="GitHub Activity">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="font-display text-headline-xl">GitHub <span class="text-primary glow-primary">Activity</span></h2>
-          <p class="font-body text-body-lg text-muted" style="max-width:640px; margin-top:12px;">
-            An overview of my open-source contributions and coding activity.
-          </p>
-        </div>
 
-        <!-- GitHub Stats -->
-        <div class="github-grid reveal delay-1">
-          <div class="card github-stat-card">
-            <span class="material-symbols-outlined text-primary" style="font-size:28px;">source</span>
-            <span class="stat-value font-headline" data-count="35" data-suffix="+">0</span>
-            <span class="stat-label">Repositories</span>
-          </div>
-          <div class="card github-stat-card">
-            <span class="material-symbols-outlined text-secondary" style="font-size:28px;">commit</span>
-            <span class="stat-value font-headline" data-count="500" data-suffix="+">0</span>
-            <span class="stat-label">Contributions</span>
-          </div>
-          <div class="card github-stat-card">
-            <span class="material-symbols-outlined text-tertiary" style="font-size:28px;">local_fire_department</span>
-            <span class="stat-value font-headline" data-count="30" data-suffix="+">0</span>
-            <span class="stat-label">Day Streak</span>
-          </div>
-          <div class="card github-stat-card">
-            <span class="material-symbols-outlined text-primary" style="font-size:28px;">star</span>
-            <span class="stat-value font-headline" data-count="4" data-suffix="">0</span>
-            <span class="stat-label">Top Languages</span>
-          </div>
-        </div>
-
-        <!-- Contribution Graph -->
-        <div class="card github-contribution-graph reveal delay-2">
-          <h3 class="font-headline text-headline-md" style="margin-bottom:16px;">Contribution Graph</h3>
-          <div id="contribution-graph" class="contribution-grid" aria-label="GitHub contribution heatmap"></div>
-          <div style="display:flex; align-items:center; gap:8px; margin-top:12px; justify-content:flex-end;">
-            <span class="text-label-sm text-muted">Less</span>
-            <div class="contribution-cell contribution-0" style="width:10px;height:10px;"></div>
-            <div class="contribution-cell contribution-1" style="width:10px;height:10px;"></div>
-            <div class="contribution-cell contribution-2" style="width:10px;height:10px;"></div>
-            <div class="contribution-cell contribution-3" style="width:10px;height:10px;"></div>
-            <div class="contribution-cell contribution-4" style="width:10px;height:10px;"></div>
-            <span class="text-label-sm text-muted">More</span>
-          </div>
-        </div>
-
-        <!-- Top Languages -->
-        <div class="card reveal delay-3" style="padding:var(--space-4); margin-top:var(--space-3);">
-          <h3 class="font-headline text-headline-md" style="margin-bottom:16px;">Top Languages</h3>
-          <div style="display:flex; gap:16px; flex-wrap:wrap;">
-            <div style="display:flex; align-items:center; gap:8px;">
-              <div style="width:12px; height:12px; border-radius:50%; background:#f7df1e;"></div>
-              <span class="font-label text-label-md">JavaScript</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <div style="width:12px; height:12px; border-radius:50%; background:#3178c6;"></div>
-              <span class="font-label text-label-md">TypeScript</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <div style="width:12px; height:12px; border-radius:50%; background:#b07219;"></div>
-              <span class="font-label text-label-md">Java</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <div style="width:12px; height:12px; border-radius:50%; background:#3572A5;"></div>
-              <span class="font-label text-label-md">Python</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:8px;">
-              <div style="width:12px; height:12px; border-radius:50%; background:#e34c26;"></div>
-              <span class="font-label text-label-md">HTML/CSS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ============================================================
          CONTACT SECTION
@@ -882,6 +804,14 @@
 
     <div class="dock-divider" aria-hidden="true"></div>
 
+    <!-- Chatbot -->
+    <a href="#" class="dock-item" data-section="chatbot" aria-label="Chatbot" id="dock-chatbot">
+      <span class="material-symbols-outlined">smart_toy</span>
+      <span class="dock-tooltip">Chatbot</span>
+    </a>
+
+    <div class="dock-divider" aria-hidden="true"></div>
+
     <!-- External Links -->
     <a href="https://github.com/Dikshant-Athawale" target="_blank" rel="noopener noreferrer" class="dock-item" aria-label="GitHub Profile">
       <span class="material-symbols-outlined">code</span>
@@ -894,6 +824,7 @@
   </nav>
 
   <!-- Scripts -->
+  <script src="chatbot.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>

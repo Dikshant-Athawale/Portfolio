@@ -43,7 +43,8 @@
     initMagneticEffect();
     initKeyboardShortcuts();
     initContactForm();
-    initContributionGraph();
+
+
   }
 
   /* ---- Loading Screen ---- */
@@ -250,6 +251,15 @@
       item.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = item.dataset.section;
+
+        // Special handling for chatbot dock item
+        if (targetId === 'chatbot') {
+          if (window.DevBotChatbot) {
+            window.DevBotChatbot.toggle();
+          }
+          return;
+        }
+
         const target = document.getElementById(targetId);
         if (target) {
           target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
@@ -513,43 +523,7 @@
     });
   }
 
-  /* ---- Contribution Graph (Static Visualization) ---- */
-  function initContributionGraph() {
-    const container = document.getElementById('contribution-graph');
-    if (!container) return;
 
-    // Generate a realistic-looking contribution pattern
-    const weeks = 20;
-    const days = 7;
-
-    // Seeded pseudo-random for consistent display
-    let seed = 42;
-    function seededRandom() {
-      seed = (seed * 16807 + 0) % 2147483647;
-      return seed / 2147483647;
-    }
-
-    for (let w = 0; w < weeks; w++) {
-      const weekEl = document.createElement('div');
-      weekEl.className = 'contribution-week';
-
-      for (let d = 0; d < days; d++) {
-        const cell = document.createElement('div');
-        const rand = seededRandom();
-        let level;
-        if (rand < 0.35) level = 0;
-        else if (rand < 0.55) level = 1;
-        else if (rand < 0.75) level = 2;
-        else if (rand < 0.9) level = 3;
-        else level = 4;
-
-        cell.className = `contribution-cell contribution-${level}`;
-        cell.setAttribute('aria-hidden', 'true');
-        weekEl.appendChild(cell);
-      }
-      container.appendChild(weekEl);
-    }
-  }
 
   /* ---- Start ---- */
   if (document.readyState === 'loading') {
