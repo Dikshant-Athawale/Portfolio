@@ -1,67 +1,147 @@
 <div align="center">
 
-# DIKSHANT RAMESH ATHAWALE
-**Full Stack Developer**
+# ✨ Dikshant Athawale — Developer Portfolio
 
-[dikshant.r.athawale@gmail.com](mailto:dikshant.r.athawale@gmail.com) | +91-7719876877 | Amravati, India  
-[linkedin.com/in/dikshant-athawale-374763213](https://linkedin.com/in/dikshant-athawale-374763213) | [github.com/Dikshant-Athawale](https://github.com/Dikshant-Athawale)
+A premium, dark-themed developer portfolio built with vanilla HTML, CSS, JavaScript, and WebGL — featuring glassmorphism, aurora shaders, smooth animations, and an AI-powered chatbot assistant.
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-4cd7f6?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-neon-eta-15.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Dikshant--Athawale-ddb7ff?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dikshant-Athawale)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![WebGL](https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white)
 
 </div>
 
-## PROFESSIONAL SUMMARY
-Full stack developer with hands-on experience building end-to-end web applications, from responsive React interfaces to RESTful APIs and relational databases, using React, Node.js, Express.js, and MySQL. Backed by strong fundamentals in data structures, OOP, and database design, with working familiarity with Docker for containerized environments. Quick learner who thrives in collaborative, code-review-driven engineering teams and is committed to writing clean, efficient, and maintainable code across the entire stack.
+---
 
-## TECHNICAL SKILLS
-| Category | Skills |
+## 🚀 Features
+
+### Core
+- **WebGL Aurora Shader Background** — Real-time animated aurora gradient with mouse-reactive lighting, with a CSS fallback for devices without WebGL support
+- **Floating Dock Navigation** — macOS-inspired bottom dock with scroll spy, magnetic hover, auto-hide on scroll, keyboard shortcuts (`1`–`8`), and tooltips
+- **Scroll Reveal Animations** — Intersection Observer-based entrance animations with staggered delays and directional variants
+- **Loading Screen** — Branded loading overlay with progress bar animation
+
+### Sections
+- **Hero** — Full-viewport introduction with floating tech icons, animated badge, and gradient text
+- **About** — Photo card with bio, stats bento grid (animated counters), and download resume CTA
+- **Tech Stack** — Filterable skill cards with category tabs and animated progress bars
+- **Projects** — Featured project showcase with image overlays, tech tags, and live demo links
+- **Education** — Vertical timeline with gradient connectors and glowing dot indicators
+- **Certifications** — Grid cards with hover-activated gradient borders
+- **Contact** — Split layout with social link cards and a contact form with validation
+
+### 🤖 DevBot — AI Chatbot Assistant
+- **Knowledge-Based Q&A** — Keyword + fuzzy matching engine against 40+ curated Q&A pairs covering skills, projects, education, certifications, career goals, and more
+- **Typewriter Animation** — Character-by-character response reveal with variable speed
+- **Markdown Rendering** — Lightweight parser for **bold**, bullet points, and line breaks
+- **Quick Suggestions** — One-tap suggestion chips for common questions
+- **Category Chips** — Contextual tags on responses (e.g., "Full Stack", "Real-Time")
+- **Typing Indicator** — Animated bouncing dots during response generation
+- **Responsive Panel** — Full-screen on mobile, slide-in side panel on desktop
+
+### Design & UX
+- **Glassmorphism** — Frosted glass surfaces with backdrop blur, translucent borders, and tonal layering
+- **Neon Accents** — Cyan, purple, and blue glow effects on interactive elements
+- **Dark Theme** — Deep navy base (`#050816`) with luminescent highlights
+- **Responsive** — Mobile-first design that scales cleanly across all breakpoints
+- **Accessibility** — Skip-to-content link, ARIA labels, `prefers-reduced-motion` support, focus-visible outlines, semantic HTML
+- **Performance** — Lazy-loaded images, efficient CSS animations, `will-change` optimization
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technologies |
 | :--- | :--- |
-| **Programming Languages** | `Java`, `JavaScript`, `Python`, `C` |
-| **Frontend Technologies** | `HTML5`, `CSS3`, `JavaScript (ES6+)`, `React` |
-| **Backend Technologies** | `Node.js`, `Express.js`, `RESTful API Design` |
-| **Core CS Concepts** | `Data Structures & Algorithms`, `OOP`, `Computer Networks`, `Operating Systems` |
-| **Database & SQL** | `SQL`, `MySQL`, `Database Design & Query Optimization` |
-| **Version Control** | `Git`, `GitHub` |
-| **Tools & DevOps** | `VS Code`, `Microsoft Excel`, `Antigravity`, `Docker` |
-| **Soft Skills** | `Problem Solving`, `Team Collaboration`, `Communication Skills` |
+| **Structure** | HTML5, Semantic Elements |
+| **Styling** | Vanilla CSS, Custom Properties, Glassmorphism, `clamp()` fluid typography |
+| **Scripting** | Vanilla JavaScript (ES6+), IIFE module pattern |
+| **Graphics** | WebGL (GLSL shaders), CSS animations & transitions |
+| **Fonts** | [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans), [Inter](https://fonts.google.com/specimen/Inter), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) |
+| **Icons** | [Material Symbols Outlined](https://fonts.google.com/icons) |
 
-## EDUCATION
-**B.E. in Computer Science Engineering (CSE)**  
-*HVPM College of Engineering and Technology | Sant Gadge Baba Amravati University (SGBAU)*  
-**Graduated: 2026** | *Amravati, India*  
+---
 
-**Higher Secondary Certificate (HSC) – Science**  
-*Vidyabharti Mahavidyalaya*  
-**Passed: 2022** | *Amravati, India*  
+## 📂 Project Structure
 
-**Secondary School Certificate (SSC)**  
-*Golden Kids High School*  
-**Passed: 2020** | *Amravati, India*  
+```
+portfolio/
+├── index.html          # Single-page HTML (all sections)
+├── styles.css          # Design system + component styles + chatbot styles
+├── scripts.js          # WebGL shader, dock nav, scroll spy, animations
+├── chatbot.js          # DevBot — knowledge base, matching engine, UI
+├── chatbot/
+│   ├── DESIGN.md       # Chatbot design system specification
+│   ├── screen.png      # Chatbot UI reference screenshot
+│   └── chatbotKnowledge.ts  # Original TypeScript knowledge base (reference)
+├── Dikshant_Athawale_Resume_FullStack.pdf
+└── README.md
+```
 
-## PROJECTS
-**College ERP: Academic Management System**  
-*Technologies: `React (TypeScript)`, `Node.js`, `Express.js`, `MySQL`, `Socket.IO`, `JWT`, `TailwindCSS`*  
-- Built a full-stack, role-based academic management system for students, faculty, and administrators — architecting both the React (TypeScript) with Vite frontend and the Node.js/Express backend, backed by a MySQL database with connection pooling.
-- Engineered real-time data synchronization across all connected clients using Socket.IO, automatically broadcasting database-change events on every mutating request to keep dashboards updated without page reloads.
+---
 
-**NullChat: Real-Time Chat Application**  
-*Technologies: `React (TypeScript)`, `Vite`, `Node.js`, `Express.js`, `WebSockets`*  
-- Built a real-time chat application with a React (TypeScript/Vite) frontend and a Node.js/Express backend, using WebSockets for live bidirectional messaging.
-- Structured the codebase as a monorepo with separate client, server, and shared modules for clean separation of concerns.
+## ⚡ Quick Start
 
-**Finance Tracker: Personal Finance Management App**  
-*Technologies: `React (TypeScript)`, `Vite`, `Node.js`, `Express.js`, `MySQL`, `Socket.IO`, `JWT`, `TailwindCSS`*  
-- Built a full-stack personal finance tracker enabling users to manage income, expenses, and budgets through a real-time, animated dashboard.
-- Implemented Socket.IO-based real-time synchronization so transactions and budgets update instantly across all open sessions.
+No build tools required — this is a static site.
 
-**Personal Portfolio Website**  
-*Technologies: `HTML5`, `CSS3`, `JavaScript`*  
-- Designed and deployed a responsive personal portfolio website showcasing projects, skills, and contact information with cross-browser compatibility.
-- Implemented mobile-first responsive design, achieving a 95+ Google Lighthouse performance score
+```bash
+# Clone the repository
+git clone https://github.com/Dikshant-Athawale/Portfolio.git
+cd Portfolio
 
-## CERTIFICATIONS
-- AI Agents: Cognitive Upgrade and Business Efficiency – AWS Training & Certification | 2026
-- Investment Banking Job Simulation – Forage | 2026
-- AI for Students: Build Your Own Generative AI Model – NxtWave | 2025
+# Serve locally (any static server works)
+python -m http.server 8000
+# or
+npx serve .
+```
 
-## EXTRACURRICULAR ACTIVITIES
-- Member, College Technical Club – participated in hackathons, tech talks, and brainstorming sessions on emerging technologies.
-- Volunteered in college code-a-thon event, assisting junior students with web development and version control concepts.
+Then open [http://localhost:8000](http://localhost:8000) in your browser.
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Key | Action |
+| :---: | :--- |
+| `1` | Jump to Home |
+| `2` | Jump to About |
+| `3` | Jump to Skills |
+| `4` | Jump to Projects |
+| `5` | Jump to Education |
+| `6` | Jump to Certifications |
+| `7` | Jump to GitHub |
+| `8` | Jump to Contact |
+| `Esc` | Close chatbot panel |
+
+---
+
+## 📊 Lighthouse Score
+
+| Metric | Score |
+| :--- | :---: |
+| Performance | 95+ |
+| Accessibility | 95+ |
+| Best Practices | 95+ |
+| SEO | 95+ |
+
+---
+
+## 📬 Contact
+
+- **Email**: [dikshant.r.athawale@gmail.com](mailto:dikshant.r.athawale@gmail.com)
+- **LinkedIn**: [dikshant-athawale-374763213](https://linkedin.com/in/dikshant-athawale-374763213)
+- **GitHub**: [Dikshant-Athawale](https://github.com/Dikshant-Athawale)
+- **Phone**: +91-7719876877
+
+---
+
+<div align="center">
+
+**Designed & Developed by Dikshant Athawale**
+
+© 2026 • Made with ❤️
+
+</div>
