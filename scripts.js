@@ -503,32 +503,69 @@
 
     if (!submitBtn || !formFields || !formSuccess) return;
 
-    submitBtn.addEventListener('click', (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      if (submitBtn.disabled) return;
 
       // Basic validation
       const name = form.querySelector('#name');
       const email = form.querySelector('#email');
       const message = form.querySelector('#message');
 
-      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-        // Shake animation on empty fields
-        [name, email, message].forEach(field => {
-          if (!field.value.trim()) {
-            field.style.borderBottomColor = '#ffb4ab';
-            field.style.animation = 'shake 0.4s ease';
-            setTimeout(() => {
-              field.style.borderBottomColor = '';
-              field.style.animation = '';
-            }, 1000);
+      let isValid = true;
+      [name, email, message].forEach(field => {
+        let fieldValid = true;
+        
+        if (!field.value.trim()) {
+          fieldValid = false;
+        } else if (field.type === 'email') {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(field.value.trim())) {
+            fieldValid = false;
           }
-        });
-        return;
-      }
+        }
 
-      // Show success
-      formFields.style.display = 'none';
-      formSuccess.classList.add('show');
+        if (!fieldValid) {
+          isValid = false;
+          field.style.borderBottomColor = '#ffb4ab';
+          field.style.animation = 'shake 0.4s ease';
+          setTimeout(() => {
+            field.style.borderBottomColor = '';
+            field.style.animation = '';
+          }, 1000);
+        }
+      });
+
+      if (!isValid) return;
+
+      // Disable button and show loading state
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending... <span class="material-symbols-outlined" style="font-size:18px; animation: spin 1s linear infinite;">autorenew</span>';
+      submitBtn.style.opacity = '0.7';
+      submitBtn.style.cursor = 'not-allowed';
+
+      // Simulate network request
+      setTimeout(() => {
+        formFields.style.display = 'none';
+        formSuccess.classList.add('show');
+        
+        // Reset form
+        form.reset();
+        
+        // Restore button state
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.style.opacity = '';
+        submitBtn.style.cursor = '';
+        
+        // Optional: you can hide success message and show form again after some time
+        setTimeout(() => {
+          formSuccess.classList.remove('show');
+          formFields.style.display = 'block';
+        }, 5000);
+      }, 1500);
     });
   }
 
