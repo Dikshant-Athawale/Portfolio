@@ -2014,3 +2014,521 @@ textarea.form-input {
     animation: none;
   }
 }
+
+/* ============================================================
+   MOBILE RESPONSIVE OVERRIDES
+   320px – 768px  |  Additive only — desktop styles untouched
+   ============================================================ */
+
+/* ---------- Tablet & Below (≤768px) ---------- */
+@media (max-width: 768px) {
+
+  /* ---- Global ---- */
+  .section {
+    padding-block: var(--space-10);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-5);
+  }
+
+  /* ---- Bottom Navigation Dock ---- */
+  .dock {
+    gap: 2px;
+    padding: 6px 8px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+    bottom: var(--space-2);
+    max-width: calc(100vw - 16px);
+  }
+
+  .dock-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dock-item .material-symbols-outlined {
+    font-size: 20px;
+  }
+
+  /* Hide tooltips on mobile — no hover on touch */
+  .dock-tooltip {
+    display: none;
+  }
+
+  .dock-divider {
+    height: 20px;
+    margin-inline: 2px;
+  }
+
+  /* ---- Hero Section ---- */
+  .hero-badge {
+    padding: 5px 12px;
+    font-size: 0.65rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-scroll-indicator {
+    bottom: var(--space-10);
+  }
+
+  /* ---- About Section ---- */
+  .about-photo-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-card {
+    padding: var(--space-3);
+  }
+
+  .about-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Skills Section ---- */
+  #skills .section-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .skills-tabs {
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    padding: 3px;
+  }
+
+  .skill-tab {
+    padding: 7px 14px;
+    font-size: 0.75rem;
+  }
+
+  .skill-item {
+    font-size: 0.8rem;
+  }
+
+  .skill-bar-track {
+    width: 60px;
+  }
+
+  /* ---- Projects Section ---- */
+  .featured-project-image {
+    min-height: 220px;
+  }
+
+  .featured-project-content {
+    padding: var(--space-3);
+    margin-top: -40px;
+  }
+
+  .project-card-body {
+    padding: var(--space-3);
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Education Timeline ---- */
+  .timeline {
+    padding-left: var(--space-4);
+  }
+
+  .timeline::before {
+    left: 11px;
+  }
+
+  .timeline-dot {
+    left: calc(-1 * var(--space-4) + 4px);
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+
+  /* ---- Contact Section ---- */
+  .contact-form {
+    padding: var(--space-3);
+  }
+
+  .contact-link-info .font-label {
+    word-break: break-all;
+  }
+
+  /* ---- Footer ---- */
+  .footer {
+    padding-bottom: calc(var(--space-16) + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* ---- Chatbot ---- */
+  .chatbot-input-area {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* ---------- Small Phones (≤480px) ---------- */
+@media (max-width: 480px) {
+
+  /* ---- Global ---- */
+  .container {
+    padding-inline: 16px;
+  }
+
+  .section {
+    padding-block: var(--space-8);
+  }
+
+  /* ---- Bottom Navigation Dock ---- */
+  .dock {
+    gap: 1px;
+    padding: 5px 6px;
+    padding-bottom: calc(5px + env(safe-area-inset-bottom, 0px));
+    bottom: var(--space-1);
+  }
+
+  .dock-item {
+    width: 36px;
+    height: 36px;
+  }
+
+  .dock-item .material-symbols-outlined {
+    font-size: 18px;
+  }
+
+  /* Hide dividers to save space */
+  .dock-divider {
+    display: none;
+  }
+
+  /* ---- Hero Section ---- */
+  .hero-content {
+    padding-inline: 4px;
+  }
+
+  .hero-badge {
+    padding: 4px 10px;
+    font-size: 0.6rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .hero-title {
+    margin-bottom: var(--space-2);
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .floating-icons {
+    display: none;
+  }
+
+  /* ---- About Section ---- */
+  .about-photo-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-bio {
+    font-size: 0.9rem;
+  }
+
+  .stat-value {
+    font-size: 1.6rem;
+  }
+
+  .stat-card {
+    padding: var(--space-2);
+  }
+
+  /* ---- Skills Section ---- */
+  .skill-category-card {
+    padding: var(--space-3);
+  }
+
+  .skill-category-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-bar-track {
+    width: 50px;
+  }
+
+  /* ---- Projects Section ---- */
+  .featured-project-image {
+    min-height: 180px;
+  }
+
+  .project-card-image {
+    height: 160px;
+  }
+
+  .tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  /* ---- Education Timeline ---- */
+  .timeline-card {
+    padding: var(--space-2);
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+  }
+
+  .timeline-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .timeline-details {
+    font-size: 0.8rem;
+  }
+
+  .timeline .tech-stack .tag {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+
+  /* ---- Certifications ---- */
+  .cert-card {
+    padding: var(--space-3);
+  }
+
+  .cert-title {
+    font-size: 1rem;
+  }
+
+  /* ---- Contact Section ---- */
+  .form-input {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  textarea.form-input {
+    min-height: 100px;
+  }
+
+  .contact-link-info .material-symbols-outlined {
+    font-size: 22px;
+  }
+
+  /* ---- Footer ---- */
+  .footer-brand {
+    font-size: 0.95rem;
+  }
+
+  .footer-tech {
+    gap: var(--space-1);
+  }
+}
+
+/* ---------- Extra Small Phones (≤375px) ---------- */
+@media (max-width: 375px) {
+
+  /* ---- Global ---- */
+  .container {
+    padding-inline: 12px;
+  }
+
+  /* ---- Bottom Navigation Dock ---- */
+  .dock {
+    gap: 0px;
+    padding: 4px 4px;
+    padding-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .dock-item {
+    width: 32px;
+    height: 32px;
+    /* Maintain 44px touch target with padding */
+    padding: 6px;
+    margin: 0;
+  }
+
+  .dock-item .material-symbols-outlined {
+    font-size: 16px;
+  }
+
+  /* ---- Hero Section ---- */
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* ---- About Section ---- */
+  .about-photo-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.6rem;
+  }
+
+  /* ---- Skills Section ---- */
+  .skill-tab {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+
+  .skill-item {
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+
+  .skill-bar-track {
+    width: 40px;
+  }
+
+  /* ---- Projects Section ---- */
+  .featured-project-content {
+    padding: var(--space-2);
+  }
+
+  .featured-project-content h3 {
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+  }
+
+  .project-card-body {
+    padding: var(--space-2);
+  }
+}
+
+/* ---------- Narrowest Phones (≤340px) ---------- */
+@media (max-width: 340px) {
+
+  .container {
+    padding-inline: 10px;
+  }
+
+  /* ---- Bottom Navigation Dock ---- */
+  .dock {
+    gap: 0px;
+    padding: 3px 3px;
+    padding-bottom: calc(3px + env(safe-area-inset-bottom, 0px));
+    /* Scroll as absolute last resort */
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .dock::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dock-item {
+    width: 28px;
+    height: 28px;
+    /* Maintain touch target via min tap area */
+    min-width: 28px;
+    padding: 4px;
+    flex-shrink: 0;
+  }
+
+  .dock-item .material-symbols-outlined {
+    font-size: 14px;
+  }
+
+  /* ---- Hero Section ---- */
+  .hero-badge {
+    font-size: 0.55rem;
+    padding: 3px 8px;
+  }
+
+  /* ---- About Section ---- */
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .about-photo-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  #hero {
+    min-height: auto;
+    padding-block: var(--space-6);
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  .floating-icons {
+    display: none;
+  }
+
+  /* Dock stays compact in landscape */
+  .dock {
+    bottom: var(--space-1);
+  }
+
+  .section {
+    padding-block: var(--space-6);
+  }
+}
+
+/* ---------- Safe Area for Notched Devices ---------- */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .dock {
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  }
+
+  .footer {
+    padding-bottom: calc(var(--space-12) + env(safe-area-inset-bottom));
+  }
+}
+
+/* ---------- Touch Optimizations ---------- */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Disable hover transforms on touch devices for better perf */
+  .card-interactive:hover {
+    transform: none;
+  }
+
+  .dock-item:hover {
+    transform: none;
+  }
+
+  /* Ensure proper tap highlight */
+  .dock-item,
+  .btn,
+  .skill-tab,
+  .chatbot-suggestion-chip,
+  .contact-link-card {
+    -webkit-tap-highlight-color: rgba(76, 215, 246, 0.1);
+  }
+
+  /* Remove magnetic effect styles that JS applies on desktop */
+  .dock-item {
+    touch-action: manipulation;
+  }
+}
