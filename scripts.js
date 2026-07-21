@@ -298,6 +298,15 @@
         if (icon) {
           icon.style.fontVariationSettings = isActive ? "'FILL' 1" : "'FILL' 0";
         }
+
+        // Auto-scroll active item into view within the scrollable dock
+        if (isActive && dock.scrollWidth > dock.clientWidth) {
+          item.scrollIntoView({
+            behavior: prefersReducedMotion ? 'auto' : 'smooth',
+            block: 'nearest',
+            inline: 'center'
+          });
+        }
       });
     }
 

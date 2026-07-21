@@ -2018,6 +2018,7 @@ textarea.form-input {
 /* ============================================================
    MOBILE RESPONSIVE OVERRIDES
    320px – 768px  |  Additive only — desktop styles untouched
+   Dock strategy: horizontal scroll with all items preserved
    ============================================================ */
 
 /* ---------- Tablet & Below (≤768px) ---------- */
@@ -2032,22 +2033,67 @@ textarea.form-input {
     margin-bottom: var(--space-5);
   }
 
-  /* ---- Bottom Navigation Dock ---- */
+  /* ---- Bottom Navigation Dock (Scrollable) ---- */
   .dock {
+    /* Position & layout */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(0) translateY(0);
+    border-radius: 0;
+    max-width: 100vw;
+    width: 100%;
+
+    /* Horizontal scroll */
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+
+    /* Hidden scrollbar – cross-browser */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    /* Consistent spacing */
     gap: 2px;
-    padding: 6px 8px;
-    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
-    bottom: var(--space-2);
-    max-width: calc(100vw - 16px);
+    padding: 8px 12px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    padding-left: calc(12px + env(safe-area-inset-left, 0px));
+    padding-right: calc(12px + env(safe-area-inset-right, 0px));
+
+    /* Glass styling refinement for full-width bar */
+    border: none;
+    border-top: 1px solid var(--glass-border);
+    background: rgba(11, 17, 32, 0.85);
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.4),
+                0 -1px 0 rgba(255, 255, 255, 0.05);
   }
 
+  /* Hidden scrollbar – WebKit */
+  .dock::-webkit-scrollbar {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  /* Dock hidden state for mobile (slide down) */
+  .dock.dock-hidden {
+    transform: translateX(0) translateY(calc(100% + 10px));
+    opacity: 0;
+  }
+
+  /* Dock items – consistent 44×44px touch targets */
   .dock-item {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
   }
 
   .dock-item .material-symbols-outlined {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   /* Hide tooltips on mobile — no hover on touch */
@@ -2055,9 +2101,12 @@ textarea.form-input {
     display: none;
   }
 
+  /* Dividers – kept but refined */
   .dock-divider {
-    height: 20px;
-    margin-inline: 2px;
+    height: 24px;
+    min-width: 1px;
+    flex-shrink: 0;
+    margin-inline: 4px;
   }
 
   /* ---- Hero Section ---- */
@@ -2189,26 +2238,11 @@ textarea.form-input {
     padding-block: var(--space-8);
   }
 
-  /* ---- Bottom Navigation Dock ---- */
+  /* ---- Dock – tighter padding on small screens ---- */
   .dock {
+    padding: 6px 8px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
     gap: 1px;
-    padding: 5px 6px;
-    padding-bottom: calc(5px + env(safe-area-inset-bottom, 0px));
-    bottom: var(--space-1);
-  }
-
-  .dock-item {
-    width: 36px;
-    height: 36px;
-  }
-
-  .dock-item .material-symbols-outlined {
-    font-size: 18px;
-  }
-
-  /* Hide dividers to save space */
-  .dock-divider {
-    display: none;
   }
 
   /* ---- Hero Section ---- */
@@ -2343,23 +2377,11 @@ textarea.form-input {
     padding-inline: 12px;
   }
 
-  /* ---- Bottom Navigation Dock ---- */
+  /* ---- Dock – minimal padding ---- */
   .dock {
+    padding: 5px 6px;
+    padding-bottom: calc(5px + env(safe-area-inset-bottom, 0px));
     gap: 0px;
-    padding: 4px 4px;
-    padding-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
-  }
-
-  .dock-item {
-    width: 32px;
-    height: 32px;
-    /* Maintain 44px touch target with padding */
-    padding: 6px;
-    margin: 0;
-  }
-
-  .dock-item .material-symbols-outlined {
-    font-size: 16px;
   }
 
   /* ---- Hero Section ---- */
@@ -2372,6 +2394,11 @@ textarea.form-input {
   .hero-cta .btn {
     width: 100%;
     max-width: 260px;
+  }
+
+  .hero-badge {
+    font-size: 0.55rem;
+    padding: 3px 8px;
   }
 
   /* ---- About Section ---- */
@@ -2417,59 +2444,7 @@ textarea.form-input {
   }
 }
 
-/* ---------- Narrowest Phones (≤340px) ---------- */
-@media (max-width: 340px) {
-
-  .container {
-    padding-inline: 10px;
-  }
-
-  /* ---- Bottom Navigation Dock ---- */
-  .dock {
-    gap: 0px;
-    padding: 3px 3px;
-    padding-bottom: calc(3px + env(safe-area-inset-bottom, 0px));
-    /* Scroll as absolute last resort */
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .dock::-webkit-scrollbar {
-    display: none;
-  }
-
-  .dock-item {
-    width: 28px;
-    height: 28px;
-    /* Maintain touch target via min tap area */
-    min-width: 28px;
-    padding: 4px;
-    flex-shrink: 0;
-  }
-
-  .dock-item .material-symbols-outlined {
-    font-size: 14px;
-  }
-
-  /* ---- Hero Section ---- */
-  .hero-badge {
-    font-size: 0.55rem;
-    padding: 3px 8px;
-  }
-
-  /* ---- About Section ---- */
-  .stat-value {
-    font-size: 1.2rem;
-  }
-
-  .about-photo-wrapper {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-
+/* ---------- Landscape Orientation Fix ---------- */
 @media (max-height: 500px) and (orientation: landscape) {
 
   #hero {
@@ -2485,11 +2460,6 @@ textarea.form-input {
     display: none;
   }
 
-  /* Dock stays compact in landscape */
-  .dock {
-    bottom: var(--space-1);
-  }
-
   .section {
     padding-block: var(--space-6);
   }
@@ -2497,12 +2467,58 @@ textarea.form-input {
 
 /* ---------- Safe Area for Notched Devices ---------- */
 @supports (padding: env(safe-area-inset-bottom)) {
+  @media (max-width: 768px) {
+    .dock {
+      padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    }
+
+    .footer {
+      padding-bottom: calc(var(--space-12) + env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* ---------- Dock Edge Fade Indicators ---------- */
+@media (max-width: 768px) {
   .dock {
-    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    /* Create stacking context for pseudo-elements */
+    position: fixed;
   }
 
-  .footer {
-    padding-bottom: calc(var(--space-12) + env(safe-area-inset-bottom));
+  /* Left fade – hints more content to the left */
+  .dock::before {
+    content: '';
+    position: sticky;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 20px;
+    flex-shrink: 0;
+    background: linear-gradient(to right,
+      rgba(11, 17, 32, 0.9) 0%,
+      rgba(11, 17, 32, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+    margin-right: -20px;
+    align-self: stretch;
+  }
+
+  /* Right fade – hints more content to the right */
+  .dock::after {
+    content: '';
+    position: sticky;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 20px;
+    flex-shrink: 0;
+    background: linear-gradient(to left,
+      rgba(11, 17, 32, 0.9) 0%,
+      rgba(11, 17, 32, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+    margin-left: -20px;
+    align-self: stretch;
   }
 }
 
@@ -2527,8 +2543,12 @@ textarea.form-input {
     -webkit-tap-highlight-color: rgba(76, 215, 246, 0.1);
   }
 
-  /* Remove magnetic effect styles that JS applies on desktop */
+  /* Smooth touch interactions */
   .dock-item {
     touch-action: manipulation;
+  }
+
+  .dock {
+    touch-action: pan-x;
   }
 }
